@@ -16,11 +16,11 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
-          java-version: '17' # Reemplaza con tu versión de Java
-          distribution: 'adoptopenjdk'
-      - name: Build with Maven
+          java-version: '17' # Reemplaza con tu versión de Java si es diferente
+          distribution: 'temurin' # Cambia a temurin
+      - name: Build with Maven # O tu comando de construcción
         run: mvn clean package
-
+        
   sonarqube:
     name: SonarQube
     runs-on: windows-latest
